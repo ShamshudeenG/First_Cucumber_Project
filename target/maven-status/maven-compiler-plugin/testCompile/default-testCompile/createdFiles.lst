@@ -1,0 +1,5 @@
+com\amzon_steps_definition\Hooks.class
+com\amzon_steps_definition\Mobile_Module.class
+com\amazon\commonfunction\CommonClass.class
+com\amazon\mobileslocators\MobileLocators.class
+com\amzon_steps_definition\TestRunner.class

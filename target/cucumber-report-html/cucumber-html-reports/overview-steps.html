@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports (no 2.0) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+              <th>Number</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Amazon_Cucumber</td>
+              <td>2.0</td>
+            <td>01 Mar 2023, 03:11</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+          <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+      </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+                      <tr>
+              <td class="location">Hooks.start(Scenario)</td>
+              <td>4</td>
+              <td class="duration" data-value="7572810550">7.572</td>
+              <td class="duration" data-value="7572810550">12.120</td>
+              <td class="duration" data-value="30291242200">30.291</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Hooks.stop()</td>
+              <td>4</td>
+              <td class="duration" data-value="1961485125">1.961</td>
+              <td class="duration" data-value="1961485125">2.889</td>
+              <td class="duration" data-value="7845940500">7.845</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Mobile_Module.user_gets_the_amazon_url(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="12093500575">12.093</td>
+              <td class="duration" data-value="12093500575">14.026</td>
+              <td class="duration" data-value="48374002300">48.374</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Mobile_Module.user_launch_the_browser()</td>
+              <td>4</td>
+              <td class="duration" data-value="103673600">0.103</td>
+              <td class="duration" data-value="103673600">0.412</td>
+              <td class="duration" data-value="414694400">0.414</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Mobile_Module.user_search_for_mobile(String)</td>
+              <td>3</td>
+              <td class="duration" data-value="17055491966">17.055</td>
+              <td class="duration" data-value="17055491966">20.359</td>
+              <td class="duration" data-value="51166475900">51.166</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Mobile_Module.user_search_for_mobile_with_one_dim_list(DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="4562730800">4.562</td>
+              <td class="duration" data-value="4562730800">4.562</td>
+              <td class="duration" data-value="4562730800">4.562</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Mobile_Module.validate_thelist_of_product_displayed()</td>
+              <td>4</td>
+              <td class="duration" data-value="28808100">0.028</td>
+              <td class="duration" data-value="28808100">0.070</td>
+              <td class="duration" data-value="115232400">0.115</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Mobile_Module.verify_the_Bestselling_Premium_Smartphones_displayed()</td>
+              <td>1</td>
+              <td class="duration" data-value="73800">0.000</td>
+              <td class="duration" data-value="73800">0.000</td>
+              <td class="duration" data-value="73800">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Mobile_Module.verify_the_Shop_by_Brand_displayed()</td>
+              <td>4</td>
+              <td class="duration" data-value="46150">0.000</td>
+              <td class="duration" data-value="46150">0.000</td>
+              <td class="duration" data-value="184600">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Mobile_Module.verify_the_Shop_by_Price_displayed()</td>
+              <td>4</td>
+              <td class="duration" data-value="83725">0.000</td>
+              <td class="duration" data-value="83725">0.000</td>
+              <td class="duration" data-value="334900">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                  </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>10</td>
+            <td>33</td>
+            <td class="duration">4.326</td>
+            <td class="duration">51.166</td>
+            <td class="duration">2:22.770</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
